@@ -1,4 +1,4 @@
 class Crust < ApplicationRecord
 
-  validates :type , :price,  presence: true
+  validates :mass , :price,  presence: true
 end

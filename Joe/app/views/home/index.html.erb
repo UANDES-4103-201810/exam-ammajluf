@@ -1,8 +1,26 @@
 <body>
-<div class="col-md-4">
-</div>
+
 <div class="col-md-4">
 
+  <header style="color: #CCCCCC">Pizza Catalogue</header>
+
+  <div class="col-md-6 ">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+      </thead>
+      <tbody>
+    <% @recipes.each do |recipes| %>
+      <tr>
+        <td><%= recipes.name %></td>
+        <td ><%= link_to 'Show', project ,class: "btn btn-success"%></td>
+      </tr>
+    <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 </body>

@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_06_20_193336) do
 
   create_table "crusts", force: :cascade do |t|
-    t.string "type"
+    t.string "mass"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,6 +37,13 @@ ActiveRecord::Schema.define(version: 2018_06_20_193336) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ingredients_recipes", id: false, force: :cascade do |t|
+    t.integer "ingredient_id"
+    t.integer "recipe_id"
+    t.index ["ingredient_id"], name: "index_ingredients_recipes_on_ingredient_id"
+    t.index ["recipe_id"], name: "index_ingredients_recipes_on_recipe_id"
   end
 
   create_table "orders", force: :cascade do |t|
