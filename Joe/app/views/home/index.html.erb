@@ -12,10 +12,10 @@
       </tr>
       </thead>
       <tbody>
-    <% @recipes.each do |recipes| %>
+    <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= recipes.name %></td>
-        <td ><%= link_to 'Show', project ,class: "btn btn-success"%></td>
+        <td><%= recipe.name %></td>
+        <td style="color: white"><%= link_to 'Show', recipes_path(recipe) %></td>
       </tr>
     <% end %>
       </tbody>

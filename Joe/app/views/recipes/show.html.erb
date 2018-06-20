@@ -1,0 +1,35 @@
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+  <h2>Pizza</h2>
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="Name">Ingredients:</label>
+          <div class="panel panel-default">
+
+            <% @recipe.ingredients.each do |ingredient| %>
+              <tr>
+                <td><%= ingredient.name %></td>
+              </tr>
+            <% end %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label >Recipe Price:</label>
+          <div class="panel panel-default">
+            <div class="panel-body"><%= @recipe.price %> </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label >Crust:</label>
+          <div class="panel panel-default">
+        <%= select_tag "Crust", options_from_collection_for_select(@crusts, "id", "mass")%>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+</div>
