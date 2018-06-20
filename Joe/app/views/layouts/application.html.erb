@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joe</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  <div class="navbar navbar-inverse">
+    <div class="navbar-class">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" >
+            <h1 style="color: #CCCCCC" align="left">Joe's Pizza</h1>
+            <header style="color: #CCCCCC">Alvaro Majluf</header>
+          </div>
+          <div class="col-md-6 ">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/home/index#">Home</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <%= yield %>
+
+  </body>
+</html>
